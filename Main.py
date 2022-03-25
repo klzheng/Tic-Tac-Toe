@@ -225,7 +225,7 @@ def replay():
 
 # **Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!**
 
-# In[51]:
+# In[54]:
 
 
 print('Welcome to Tic Tac Toe!')
@@ -268,7 +268,7 @@ def game_run():
             else: # position not in range(1,9):
                 position = input('Please re-enter a valid position: ')
 
-        elif full_board_check(board) == True:
+        if full_board_check(board) == True:
             tie = input('Tie! Do you want to play again? Y or N')
 
             if tie == 'Y':
@@ -277,6 +277,7 @@ def game_run():
 
             elif tie == 'N':
                 break
+    
 
 
     if win_check(board) == True:
